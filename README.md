@@ -17,7 +17,7 @@ Self-hosted **Laghaim MMO** — 32-bit Linux game server running in Docker, with
 | [Docker Desktop](https://www.docker.com/products/docker-desktop/) (Windows) | Linux containers mode |
 | ~6 GB free disk | MySQL import is large |
 | ~2 GB RAM | `minimal` mode; `full` mode needs 4–6 GB |
-| Windows client folder `LaghaimClient/` | Find more detail [CLIENT.md](CLIENT.md) |
+| Windows client folder `LaghaimClient/` | Compatibles Client [CLIENT.md](CLIENT.md) |
 | Node.js 14+ | Only needed to re-patch `SvrList.dta` |
 
 ### 1 — Clone / extract
