@@ -43,7 +43,7 @@ node D:\Laghaim\tools\svrlist-patch.js 192.168.1.50 4015 SavageEden
 Restore original:
 
 ```powershell
-copy D:\Laghaim\Laghaim\SvrList.dta.orig D:\Laghaim\Laghaim\SvrList.dta
+copy D:\Laghaim\LaghaimClient\SvrList.dta.orig D:\Laghaim\LaghaimClient\SvrList.dta
 ```
 
 See [tools/README.md](tools/README.md) for file format details.
@@ -112,7 +112,7 @@ Try DDrawCompat **v0.3.1** instead of latest.
 ## Launch
 
 ```bat
-cd D:\Laghaim\Laghaim
+cd D:\Laghaim\LaghaimClient
 game.exe 1
 ```
 
