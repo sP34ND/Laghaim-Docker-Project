@@ -1,7 +1,5 @@
 # Laghaim Windows Client Guide
 
-Path: `D:\Laghaim\Laghaim\`
-
 Server must be running first — see [docker/DOCKER.md](docker/DOCKER.md) or [SETUP.md](SETUP.md).
 
 ---
@@ -190,6 +188,10 @@ WHERE user_id = 'testreg';
 Minimal Docker mode runs zones **0** (decard, `:4001`) and **4** (start, `:4005`).
 
 ---
+
+## Compatible Client
+
+Download [LaghaimClient](https://drive.google.com/file/d/1iTF5GZSP1eJqf0WjNdcJbssZ_HQ6ovWr/view?usp=sharing)
 
 ## See also
 
