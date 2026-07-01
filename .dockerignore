@@ -1,0 +1,7 @@
+Laghaim/
+.git/
+*.log
+svlaghaim/**/log/
+svlaghaim/**/rebootlog*
+svlaghaim/**/nohup.out
+svlaghaim/**/LhLog/

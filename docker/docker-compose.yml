@@ -1,0 +1,64 @@
+services:
+  mysql:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.mysql
+    container_name: laghaim-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-laghaimofficial}
+    command:
+      - --character-set-server=utf8
+      - --collation-server=utf8_general_ci
+      - --max_allowed_packet=512M
+      - --innodb_buffer_pool_size=512M
+    volumes:
+      - laghaim-mysql-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 -uroot -p$$MYSQL_ROOT_PASSWORD || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+      start_period: 120s
+    ports:
+      - "${MYSQL_PUBLISH_PORT:-3307}:3306"
+
+  laghaim:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    platform: linux/386
+    container_name: laghaim-server
+    restart: unless-stopped
+    depends_on:
+      mysql:
+        condition: service_healthy
+    environment:
+      GAME_HOST_IP: ${GAME_HOST_IP:-127.0.0.1}
+      MYSQL_HOST: mysql
+      MYSQL_PORT: 3306
+      MYSQL_USER: root
+      MYSQL_PASSWORD: ${MYSQL_ROOT_PASSWORD:-laghaimofficial}
+      CLIENT_VERSION: ${CLIENT_VERSION:-3034}
+      EXPRATE: ${EXPRATE:-100}
+      DROPRATE: ${DROPRATE:-10}
+      EQUIP_DROPRATE: ${EQUIP_DROPRATE:-100}
+      ZONE_DROPRATE: ${ZONE_DROPRATE:-10}
+      PETEXPRATE: ${PETEXPRATE:-40}
+      LAGHAIM_MODE: ${LAGHAIM_MODE:-minimal}
+    ports:
+      - "4015:4015"   # Connector (login)
+      - "4011:4011"   # Messenger
+      - "4012:4012"   # Helper
+      - "4018:4018"   # Packet sniffing (full mode)
+      - "4021:4021"   # Battle zone
+      - "4001-4036:4001-4036"   # Channel 0 zones
+      - "5001-5036:5001-5036"   # Channel 1 zones (full mode)
+    # Full mode with 22 zones can need 4GB+ RAM
+    deploy:
+      resources:
+        limits:
+          memory: ${LAGHAIM_MEMORY_LIMIT:-4g}
+
+volumes:
+  laghaim-mysql-data:

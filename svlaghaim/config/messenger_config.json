@@ -1,0 +1,7 @@
+{
+	"DB_LIST" :
+	[
+		[999,"127.0.0.1",3306,"root","laghaimofficial","kor_ndev_neogeo_user"],
+		[1,"127.0.0.1",3306,"root","laghaimofficial","kor_ndev_neogeo_char"]
+	]
+}

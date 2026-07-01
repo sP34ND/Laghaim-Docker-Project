@@ -1,0 +1,43 @@
+{
+	"EVENT_LOTTO_ITEM" : 3794,
+	"EVENT_LOTTO_ITEM_CHANCE_COUNT" : 5,
+	
+	"EVENT_LOTTO_WINNER_WEEK" : 3,
+	
+	"EVENT_LOTTO_REG_LIMIT_START" :
+	[2,23,30],
+	
+	"EVENT_LOTTO_REG_LIMIT_END" :
+	[3,0,30],
+	
+	"EVENT_LOTTO_WINNER_WORLD" : 6,
+	"EVENT_LOTTO_REG_COUNT_MAX" : 50,
+	
+	"EVENT_LOTTO_GIFT_NO1":
+	[
+		[3331,5],
+		[1967,5],
+		[3791,5],
+		[3790,1]
+	],
+	
+	"EVENT_LOTTO_GIFT_NO2":
+	[
+		[3331,3],
+		[1967,3],
+		[3791,3]
+	],
+	
+	"EVENT_LOTTO_GIFT_NO3":
+	[
+		[3331,2],
+		[1967,2],
+		[3791,2]
+	],
+	
+	"EVENT_LOTTO_GIFT_NO4":
+	[
+		[3331,1],
+		[1967,1]
+	]
+}

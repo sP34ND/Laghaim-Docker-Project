@@ -1,0 +1,29 @@
+# Live config — contains passwords; commit .env.example instead
+docker/.env
+
+# Large binary / archive folders (not needed to run)
+archived/
+Thai_Laghaim_Online/
+
+# Game client binaries (large, distribute separately)
+LaghaimClient/
+
+# Server log and runtime files
+*.log
+svlaghaim/**/log/
+svlaghaim/**/LogFiles/
+svlaghaim/**/nohup.out
+svlaghaim/**/rebootlog*
+svlaghaim/**/LhLog/
+svlaghaim/**/*.pid
+
+# MySQL runtime
+docker/_chk.sql
+
+# Node
+node_modules/
+tools/node_modules/
+
+# Windows
+Thumbs.db
+Desktop.ini

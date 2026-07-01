@@ -1,0 +1,9 @@
+{
+	"SMS_FLAG" : true,
+	"DEST_LIST_MAX" : 4,
+	
+	"DEST_1" : { "NAME" : "RYU", "PHONE" : "01030647356" },
+	"DEST_2" : { "NAME" : "PARK", "PHONE" : "01040666180" },
+	"DEST_3" : { "NAME" : "NA", "PHONE" : "01073077271" },
+	"DEST_4" : { "NAME" : "LEE", "PHONE" : "01022780701" }
+}

@@ -1,0 +1,14 @@
+{
+	"READY_SEC" :  180,
+	"BUFF_SEC" :  120,
+	"START_ALRAM_SEC" : 120,
+	"END_ALRAM_SEC" : 60,
+	
+	"BUFF_LIST" :
+	[
+		[0,10],
+		[1,10],
+		[2,3000],
+		[3,10]
+	]
+}

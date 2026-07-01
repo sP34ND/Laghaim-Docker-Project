@@ -1,0 +1,8 @@
+FROM mysql:5.7
+
+COPY docker/mysql-init/00-create-databases.sql /docker-entrypoint-initdb.d/00-create-databases.sql
+COPY docker/mysql-init/01-import.sh /docker-entrypoint-initdb.d/01-import.sh
+COPY sql/ /sql/
+
+RUN sed -i 's/\r$//' /docker-entrypoint-initdb.d/01-import.sh && \
+    chmod +x /docker-entrypoint-initdb.d/01-import.sh
