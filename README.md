@@ -6,6 +6,8 @@ Self-hosted **Laghaim MMO** — 32-bit Linux game server running in Docker, with
 
 ---
 
+<img width="1913" height="1011" alt="laghaim" src="https://github.com/user-attachments/assets/07b54e58-32b3-45aa-9abe-a9a50baea73d" />
+
 ## Quick start (Docker)
 
 ### Prerequisites
