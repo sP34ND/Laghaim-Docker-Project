@@ -267,6 +267,23 @@ docker compose build --no-cache
 docker compose down -v
 docker compose up --build
 ```
+---
+
+## Credits
+
+This repository packages the server into Docker, provides setup scripts, configuration, documentation, and quality-of-life improvements. It would not have been possible without the original server files shared by the community.
+
+### Original Server Files
+
+The original **Laghaim Official Server Files** were published by **SavageEden** on the **RageZone** forums.
+
+- **Source:** https://forum.ragezone.com/threads/laghaim-official-server-files.1137091
+- **Author:** SavageEden
+- **Community:** RageZone
+
+Many thanks to **SavageEden** and the **RageZone** community for preserving and sharing these files.
+
+> **Note:** This repository primarily provides Dockerization, setup automation, configuration, documentation, and tooling. Credit for the original server binaries and game data belongs to their respective owners and the original release by SavageEden.
 
 ---
 
